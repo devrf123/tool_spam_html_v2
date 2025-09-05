@@ -1,0 +1,92 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+
+body {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Container */
+.login-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Logo */
+.logo img {
+  max-width: 180px;
+  margin-bottom: 30px;
+}
+
+/* Form */
+.login-form {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  position: relative;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 10px 38px 10px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 36px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Button */
+.btn {
+  background: #c62828;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #b71c1c;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-container {
+    max-width: 95%;
+  }
+
+  .logo img {
+    max-width: 140px;
+  }
+}

@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mail Campaign Dashboard</title>
     <link rel="stylesheet" href="assets/css/mail.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/button_stop.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -63,6 +65,15 @@
                         <div class="wrapper-btn-ct">
                             <div class="logo-key">Mail</div>
                             <button class="btn">▶ Start</button>
+                            <div class="dropdown" id="dropdown">
+                                <button class="dropbtn">
+                                    ⏸ Stop ▼
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="#">Temporary Stop</a>
+                                    <a href="#">Full Stop</a>
+                                </div>
+                            </div>
                         </div>
                         <div class="stats-row-custom">
                             <div class="stat-item">
@@ -100,22 +111,22 @@
                             <div class="label">Spam Complaints</div>
                             <div class="value">24</div>
                         </div>
-                         <div class="kpi">
+                        <div class="kpi">
                             <div class="label">Total Emails Sent</div>
                             <div class="value">24</div>
                         </div>
-                         <div class="kpi">
+                        <div class="kpi">
                             <div class="label">Total Failed Emails</div>
                             <div class="value">24</div>
                         </div>
-                         
+
                     </section>
                 </div>
-    
-    
+
+
                 <section class="content">
-    
-    
+
+
                     <!-- Right: Logs + table -->
                     <div class="right-col">
                         <div class="top-row-wrapper">
@@ -169,7 +180,7 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                                 <!-- Card 2 (duplicate style) -->
                                 <div class="smtp-card">
                                     <div class="smtp-head">
@@ -218,7 +229,7 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                                 <div class="smtp-card">
                                     <div class="smtp-head">
                                         <h4>smtp.hostinger.com:587</h4>
@@ -321,16 +332,25 @@
                                 <!-- <textarea class="logs" placeholder="..."></textarea> -->
                             </div>
                         </div>
-    
+
                         <div class="box-table table-container">
                             <div class="table-wrap">
                                 <table class="table">
                                     <thead>
                                         <tr>
                                             <th style="width:160px">UID</th>
-                                            <th><div class="sp-custom-margin">Name <img src="assets/images/pheu.png" width="11" height="10" alt="pheu"></div></th>
-                                            <th ><div class="sp-custom-margin">Email <img src="assets/images/pheu.png" width="11" height="10" alt="pheu"></div></th>
-                                            <th style="width:130px"><div class="sp-custom-margin">Phone <img src="assets/images/pheu.png" width="11" height="10" alt="pheu"></div></th>
+                                            <th>
+                                                <div class="sp-custom-margin">Name <img src="assets/images/pheu.png"
+                                                        width="11" height="10" alt="pheu"></div>
+                                            </th>
+                                            <th>
+                                                <div class="sp-custom-margin">Email <img src="assets/images/pheu.png"
+                                                        width="11" height="10" alt="pheu"></div>
+                                            </th>
+                                            <th style="width:130px">
+                                                <div class="sp-custom-margin">Phone <img src="assets/images/pheu.png"
+                                                        width="11" height="10" alt="pheu"></div>
+                                            </th>
                                             <th>Web</th>
                                             <th style="width:110px; text-align: right;">Log status</th>
                                         </tr>
@@ -499,5 +519,5 @@
     </div>
 
 </body>
-
+<script src="assets/js/start.js"></script>
 </html>

@@ -482,6 +482,7 @@ input:checked + .slider:before {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
+    table-layout: fixed; /* Giúp các cột có chiều rộng cố định */
 }
 .table thead th {
     position: sticky;
@@ -500,11 +501,31 @@ input:checked + .slider:before {
     align-items: center !important;
     justify-content: space-between !important;
 }
+.table tbody {
+    display: block;
+    max-height: 400px; /* Bạn có thể thay đổi chiều cao này */
+    overflow-y: auto;
+}
+.table thead,
+.table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.table th:nth-child(1), .table td:nth-child(1) { width: 15%; }
+.table th:nth-child(2), .table td:nth-child(2) { width: 15%; }
+.table th:nth-child(3), .table td:nth-child(3) { width: 25%; }
+.table th:nth-child(4), .table td:nth-child(4) { width: 15%; }
+.table th:nth-child(5), .table td:nth-child(5) { width: 20%; }
+.table th:nth-child(6), .table td:nth-child(6) { width: 10%; text-align: right;}
+
 .table tbody td {
     padding: 10px;
     border-bottom: 1px solid var(--border);
     font-size: 13px;
     color: #0A090B;
+    word-wrap: break-word;
 }
 .table .uid {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -520,7 +541,7 @@ input:checked + .slider:before {
 
 .table-wrap {
     flex-grow: 1;
-    overflow: auto;
+    overflow: hidden;
     border: 1px solid var(--border);
     border-radius: 12px;
 }

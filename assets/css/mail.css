@@ -165,7 +165,15 @@ body {
     display: grid;
     grid-template-rows: auto auto 1fr;
     gap: 14px;
-    padding: 16px 18px 28px;
+    /* padding: 16px 18px 28px; */
+}
+.main-content{
+    padding: 0px 18px 28px;
+}
+
+.logo-key{
+    font-size: 38px;
+    font-weight: 700;
 }
 /* Top bar */
 .topbar {
@@ -173,6 +181,8 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 16px;
+    background: #FDFDFD;
+    padding: 0px 18px;
 }
 .tabs {
     display: flex;
@@ -188,6 +198,11 @@ body {
     color: #222;
     cursor: pointer;
     font-weight: 500;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
 }
 .tab.active {
     background: transparent;
@@ -209,6 +224,7 @@ body {
     box-shadow: var(--shadow);
     cursor: pointer;
     font-weight: 600;
+    margin-left: 20px;
 }
 .btn.secondary {
     background: #fff;
@@ -221,6 +237,7 @@ body {
     display: grid;
     grid-template-columns: repeat(7, minmax(140px, 1fr));
     gap: 12px;
+    margin-bottom: 10px;
 }
 .kpi {
     background: #fff;

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mail Campaign Dashboard</title>
+    <link rel="stylesheet" href="assets/css/mail.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app">
+        <!-- ================= Sidebar ================= -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="logo"><img src="assets/images/logo.png" alt="Spamail"></div>
+            </div>
+
+            <div class="nav-group">
+                <div class="nav-item"><span>Analysis</span></div>
+                <div class="nav-item"><span>Settings</span></div>
+                <div class="nav-item"><span>Content</span></div>
+                <div class="nav-item"><span>Campaign</span></div>
+            </div>
+
+            <div class="side-title">Campaign</div>
+            <div class="campaigns">
+                <div class="campaign active"><span>Campaign 1</span></div>
+                <div class="campaign"><span>Campaign 2</span></div>
+                <div class="campaign"><span>Campaign 3</span></div>
+                <div class="campaign"><span>Campaign 4</span></div>
+                <div class="campaign"><span>Campaign 5</span></div>
+                <div class="campaign"><span>Campaign 6</span></div>
+                <div class="campaign"><span>Campaign 7</span></div>
+                <div class="campaign"><span>Campaign 8</span></div>
+                <div class="campaign"><span>Campaign 9</span></div>
+                <div class="campaign"><span>Campaign 10</span></div>
+                <div class="campaign"><span>Campaign 11</span></div>
+                <div class="campaign"><span>Campaign 12</span></div>
+                <div class="campaign" style="color: #ccc;"><span>Campaign 13</span></div>
+            </div>
+            <div class="new-btn">
+                <button>+</button>
+            </div>
+        </aside>
+
+        <!-- ================= Main ================= -->
+        <main class="main">
+            <div class="topbar">
+                <div class="tabs">
+                    <div class="tab active"><span>📧</span> Mail</div>
+                    <div class="tab"><span>💬</span> SMS</div>
+                    <div class="tab"><span>🟢</span> WhatsApp</div>
+                </div>
+                <div class="header-actions">
+                    
+                    <button class="btn secondary">Campaign information</button>
+                </div>
+            </div>
+
+            <div class="stats-bar">
+                <div class="top-stats">
+                    <div class="wrapper-btn-ct">
+                        <div class="logo-key">Mail</div>
+                        <button class="btn">▶ Start</button>
+                    </div>
+                    <div class="stats-row-custom">
+                        <div class="stat-item">
+                            <div class="label">Total title</div>
+                            <div class="value">24</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="label">Total contents</div>
+                            <div class="value">24</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="label">Total files uploaded</div>
+                            <div class="value">1</div>
+                        </div>
+                    </div>
+                </div>
+                <section class="kpis">
+                    <div class="kpi">
+                        <div class="label">Total Contacts</div>
+                        <div class="value">24</div>
+                    </div>
+                    <div class="kpi">
+                        <div class="label">Open Rate</div>
+                        <div class="value">24</div>
+                    </div>
+                    <div class="kpi">
+                        <div class="label">Click‑Through Rate</div>
+                        <div class="value">24</div>
+                    </div>
+                    <div class="kpi">
+                        <div class="label">Bounce Rate</div>
+                        <div class="value">24</div>
+                    </div>
+                    <div class="kpi">
+                        <div class="label">Spam Complaints</div>
+                        <div class="value">24</div>
+                    </div>
+                     <div class="kpi">
+                        <div class="label">Total Emails Sent</div>
+                        <div class="value">24</div>
+                    </div>
+                     <div class="kpi">
+                        <div class="label">Total Failed Emails</div>
+                        <div class="value">24</div>
+                    </div>
+                     
+                </section>
+            </div>
+
+
+            <section class="content">
+
+
+                <!-- Right: Logs + table -->
+                <div class="right-col">
+                    <div class="top-row-wrapper">
+                        <!-- Left: SMTP cards list -->
+                        <div class="smtp-stack">
+                            <!-- Card 1 -->
+                            <div class="smtp-card">
+                                <div class="smtp-head">
+                                    <h4>smtp.hostinger.com:587</h4>
+                                    <div class="pill-row">
+                                        <div class="switch-container">
+                                            <span>OPEN SPAM</span>
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
+                                        <div class="switch-container">
+                                            <span>PROXY</span>
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="field"><label>Username</label>
+                                        <div class="value">info@cellain.com</div>
+                                    </div>
+                                    <div class="field"><label>Sever password</label>
+                                        <div class="value">infocellain</div>
+                                    </div>
+                                    <div class="field"><label>Limit</label>
+                                        <div class="value">1000</div>
+                                    </div>
+                                    <div class="field"><label>Pause Duration</label>
+                                        <div class="value">60s</div>
+                                    </div>
+                                    <div class="field"><label>IP</label>
+                                        <div class="value">51.79.182.110</div>
+                                    </div>
+                                    <div class="field"><label>Port</label>
+                                        <div class="value">44993</div>
+                                    </div>
+                                    <div class="field"><label>User</label>
+                                        <div class="value">mcgbpi7z1g</div>
+                                    </div>
+                                    <div class="field"><label>Password</label>
+                                        <div class="value">gBpl7z1G</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 (duplicate style) -->
+                            <div class="smtp-card">
+                                <div class="smtp-head">
+                                    <h4>smtp.hostinger.com:587</h4>
+                                    <div class="pill-row">
+                                        <div class="switch-container">
+                                            <span>OPEN SPAM</span>
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
+                                        <div class="switch-container">
+                                            <span>PROXY</span>
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="field"><label>Username</label>
+                                        <div class="value">info@cellain.com</div>
+                                    </div>
+                                    <div class="field"><label>Sever password</label>
+                                        <div class="value">infocellain</div>
+                                    </div>
+                                    <div class="field"><label>Limit</label>
+                                        <div class="value">1000</div>
+                                    </div>
+                                    <div class="field"><label>Pause Duration</label>
+                                        <div class="value">60s</div>
+                                    </div>
+                                    <div class="field"><label>IP</label>
+                                        <div class="value">51.79.182.110</div>
+                                    </div>
+                                    <div class="field"><label>Port</label>
+                                        <div class="value">44993</div>
+                                    </div>
+                                    <div class="field"><label>User</label>
+                                        <div class="value">mcgbpi7z1g</div>
+                                    </div>
+                                    <div class="field"><label>Password</label>
+                                        <div class="value">gBpl7z1G</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="smtp-card">
+                                <div class="smtp-head">
+                                    <h4>smtp.hostinger.com:587</h4>
+                                    <div class="pill-row">
+                                        <div class="switch-container">
+                                            <span>OPEN SPAM</span>
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
+                                        <div class="switch-container">
+                                            <span>PROXY</span>
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="field"><label>Username</label>
+                                        <div class="value">info@cellain.com</div>
+                                    </div>
+                                    <div class="field"><label>Sever password</label>
+                                        <div class="value">infocellain</div>
+                                    </div>
+                                    <div class="field"><label>Limit</label>
+                                        <div class="value">1000</div>
+                                    </div>
+                                    <div class="field"><label>Pause Duration</label>
+                                        <div class="value">60s</div>
+                                    </div>
+                                    <div class="field"><label>IP</label>
+                                        <div class="value">51.79.182.110</div>
+                                    </div>
+                                    <div class="field"><label>Port</label>
+                                        <div class="value">44993</div>
+                                    </div>
+                                    <div class="field"><label>User</label>
+                                        <div class="value">mcgbpi7z1g</div>
+                                    </div>
+                                    <div class="field"><label>Password</label>
+                                        <div class="value">gBpl7z1G</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="smtp-card">
+                                <div class="smtp-head">
+                                    <h4>smtp.hostinger.com:587</h4>
+                                    <div class="pill-row">
+                                        <div class="switch-container">
+                                            <span>OPEN SPAM</span>
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
+                                        <div class="switch-container">
+                                            <span>PROXY</span>
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="field"><label>Username</label>
+                                        <div class="value">info@cellain.com</div>
+                                    </div>
+                                    <div class="field"><label>Sever password</label>
+                                        <div class="value">infocellain</div>
+                                    </div>
+                                    <div class="field"><label>Limit</label>
+                                        <div class="value">1000</div>
+                                    </div>
+                                    <div class="field"><label>Pause Duration</label>
+                                        <div class="value">60s</div>
+                                    </div>
+                                    <div class="field"><label>IP</label>
+                                        <div class="value">51.79.182.110</div>
+                                    </div>
+                                    <div class="field"><label>Port</label>
+                                        <div class="value">44993</div>
+                                    </div>
+                                    <div class="field"><label>User</label>
+                                        <div class="value">mcgbpi7z1g</div>
+                                    </div>
+                                    <div class="field"><label>Password</label>
+                                        <div class="value">gBpl7z1G</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box logs-box">
+                            <div class="logs-header">
+                                <div class="title">Logs:</div>
+                            </div>
+                            <textarea class="logs" placeholder="..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="box-table table-container">
+                        <div class="table-wrap">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th style="width:160px">UID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th style="width:130px">Phone</th>
+                                        <th>Web</th>
+                                        <th style="width:110px; text-align: right;">Log status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="uid">100064910973166</td>
+                                        <td>Oxfam Great Britain</td>
+                                        <td>heretohelp@oxam.org.uk</td>
+                                        <td>+44 1733 343190</td>
+                                        <td>https://www.youtube.com/</td>
+                                        <td class="status run" style="text-align: right;">Run</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="uid">100064910973167</td>
+                                        <td>Save the Children</td>
+                                        <td>info@savethechildren.org.uk</td>
+                                        <td>+44 20 7012 6400</td>
+                                        <td>https://www.savethechildren.org.uk/</td>
+                                        <td class="status fail" style="text-align: right;">Fail</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="uid">100064910973168</td>
+                                        <td>British Red Cross</td>
+                                        <td>support@redcross.org.uk</td>
+                                        <td>+44 345 711 1111</td>
+                                        <td>https://www.redcross.org.uk/</td>
+                                        <td class="status fail" style="text-align: right;">Fail</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="uid">100064910973169</td>
+                                        <td>Cancer Research UK</td>
+                                        <td>contactus@cancer.org.uk</td>
+                                        <td>+44 300 123 1022</td>
+                                        <td>https://www.cancerresearchuk.org/</td>
+                                        <td class="status run" style="text-align: right;">Run</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="uid">100064910973170</td>
+                                        <td>World Wildlife Fund</td>
+                                        <td>info@wwf.org.uk</td>
+                                        <td>+44 800 072 1111</td>
+                                        <td>https://www.wwf.org.uk/</td>
+                                        <td class="status run" style="text-align: right;">Run</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="uid">100064910973171</td>
+                                        <td>UNICEF UK</td>
+                                        <td>support@unicef.org.uk</td>
+                                        <td>+44 20 7375 6000</td>
+                                        <td>https://www.unicef.org.uk/</td>
+                                        <td class="status run" style="text-align: right;">Run</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="uid">100064910973172</td>
+                                        <td>Greenpeace</td>
+                                        <td>info.uk@greenpeace.org</td>
+                                        <td>+44 20 7865 8255</td>
+                                        <td>https://www.greenpeace.org.uk/</td>
+                                        <td class="status fail" style="text-align: right;">Fail</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="uid">100064910973173</td>
+                                        <td>Amnesty International</td>
+                                        <td>info@amnesty.org.uk</td>
+                                        <td>+44 20 7033 1500</td>
+                                        <td>https://www.amnesty.org.uk/</td>
+                                        <td class="status run" style="text-align: right;">Run</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="uid">100064910973174</td>
+                                        <td>Shelter</td>
+                                        <td>shelter@shelter.org.uk</td>
+                                        <td>+44 20 7505 2000</td>
+                                        <td>https://shelter.org.uk/</td>
+                                        <td class="status fail" style="text-align: right;">Fail</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="uid">100064910973175</td>
+                                        <td>Friends of the Earth</td>
+                                        <td>info@foe.co.uk</td>
+                                        <td>+44 20 7566 1649</td>
+                                        <td>https://friendsoftheearth.uk/</td>
+                                        <td class="status run" style="text-align: right;">Run</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="uid">100064910973176</td>
+                                        <td>Victim Support</td>
+                                        <td>support@victimsupport.org.uk</td>
+                                        <td>+44 808 168 9111</td>
+                                        <td>https://www.victimsupport.org.uk/</td>
+                                        <td class="status run" style="text-align: right;">Run</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="uid">100064910973177</td>
+                                        <td>The Salvation Army</td>
+                                        <td>info@salvationarmy.org.uk</td>
+                                        <td>+44 20 7367 4500</td>
+                                        <td>https://www.salvationarmy.org.uk/</td>
+                                        <td class="status fail" style="text-align: right;">Fail</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="uid">100064910973178</td>
+                                        <td>ActionAid</td>
+                                        <td>info@actionaid.org.uk</td>
+                                        <td>+44 20 7561 7600</td>
+                                        <td>https://www.actionaid.org.uk/</td>
+                                        <td class="status fail" style="text-align: right;">Fail</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="uid">100064910973179</td>
+                                        <td>RSPCA</td>
+                                        <td>contactus@rspca.org.uk</td>
+                                        <td>+44 300 123 4999</td>
+                                        <td>https://www.rspca.org.uk/</td>
+                                        <td class="status fail" style="text-align: right;">Fail</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="uid">100064910973180</td>
+                                        <td>Help for Heroes</td>
+                                        <td>info@helpforheroes.org.uk</td>
+                                        <td>+44 300 303 9888</td>
+                                        <td>https://www.helpforheroes.org.uk/</td>
+                                        <td class="status run" style="text-align: right;">Run</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>

@@ -59,6 +59,10 @@
       width: 30%;
       border-right: 1px solid #eee;
       overflow-y: auto;
+      margin: 10px;
+      border-radius: 8px;
+      border: 2px solid #ddd;
+      background: #F8F8F8;
     }
     .content {
       flex: 1;
@@ -73,8 +77,14 @@
       padding: 0.8rem 1rem;
       border-bottom: 1px solid #f0f0f0;
     }
+    .item-header span{
+        font-size: 24px;
+        font-weight: 700;
+        padding: 0.8rem 1rem;
+    }
     .item span, .content-item span {
-      font-size: 0.9rem;
+      font-size: 18px;
+        font-weight: 700;
     }
     .edit {
       color: #e11;

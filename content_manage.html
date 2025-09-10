@@ -238,6 +238,25 @@
   </div>
 </div>
 
+  <!-- Edit Title Modal -->
+  <div id="edit-title-modal" class="modal-overlay">
+    <div class="modal-content edit-title-content">
+      <div class="modal-header">
+        <h2>Edit title</h2>
+        <button class="close-modal-btn" data-modal-id="edit-title-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="edit-title-input">Title</label>
+          <input type="text" id="edit-title-input" value="Title 1">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn red">Update</button>
+      </div>
+    </div>
+  </div>
+
 <script>
   function openFileManagerModal() {
     document.getElementById("fileManagerModal").classList.add("active");
@@ -286,6 +305,7 @@
     // ================= Modal handler =================
     const contentModal = document.getElementById('create-content-modal');
     const titleModal = document.getElementById('create-title-modal');
+    const editTitleModal = document.getElementById('edit-title-modal');
 
     // Open Modals
     document.querySelector('.create-popup .popup-item:nth-child(1)').addEventListener('click', (e) => {
@@ -298,11 +318,31 @@
       titleModal.style.display = 'flex';
     });
 
+    // Open Edit Title Modal when .item is clicked
+    document.querySelectorAll('.item').forEach((item) => {
+      item.addEventListener('click', (e) => {
+        // Do nothing if the click is on the toggle switch itself
+        if (e.target.classList.contains('toggle')) {
+            return;
+        }
+        
+        e.preventDefault();
+        editTitleModal.style.display = 'flex';
+
+        // Get the title from the clicked item and set it in the modal input
+        const currentTitle = item.querySelector('span:first-child').innerText;
+        document.getElementById('edit-title-input').value = currentTitle;
+      });
+    });
+
     // Close Modals with X button
     document.querySelectorAll('.close-modal-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        const modal = document.getElementById(btn.dataset.modalId);
-        modal.style.display = 'none';
+        const modalId = btn.getAttribute('data-modal-id');
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.style.display = 'none';
+        }
       });
     });
 

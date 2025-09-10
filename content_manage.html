@@ -128,6 +128,76 @@
     </div>
   </div>
 
+  <!-- ================= MODALS ================= -->
+
+  <!-- Create Content Modal -->
+  <div id="create-content-modal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Create content</h2>
+        <button class="close-modal-btn" data-modal-id="create-content-modal">&times;</button>
+      </div>
+      <div class="modal-body content-modal-body">
+        <div class="modal-sidebar">
+          <div class="popup-header">Placeholder</div>
+          <div class="placeholder-item"><span>1</span><span class="tag">[:uid]</span><span>&rarr;</span><span>UID</span></div>
+          <div class="placeholder-item"><span>2</span><span class="tag">[:fullname]</span><span>&rarr;</span><span>Name</span></div>
+          <div class="placeholder-item"><span>3</span><span class="tag">[:email]</span><span>&rarr;</span><span>Email</span></div>
+          <div class="placeholder-item"><span>4</span><span class="tag">[:phone]</span><span>&rarr;</span><span>Phone</span></div>
+          <div class="placeholder-item"><span>5</span><span class="tag">[:website]</span><span>&rarr;</span><span>Web</span></div>
+        </div>
+        <div class="modal-main-form">
+          <div class="content-tabs">
+            <button class="tab-btn active">Write HTML by hand</button>
+            <button class="tab-btn">Compose with Editor</button>
+          </div>
+          <div class="form-group">
+            <label for="content-name">Content name*</label>
+            <input type="text" id="content-name">
+          </div>
+          <div class="form-group">
+            <label>Upload files*</label>
+            <div class="upload-area">
+              <img src="assets/images/upload-icon.png" alt="upload" width="24">
+              <span>Upload file</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email-content">Email Content*</label>
+            <textarea id="email-content" rows="6"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn red">Create</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Create Title Modal -->
+  <div id="create-title-modal" class="modal-overlay">
+    <div class="modal-content title-modal-content">
+      <div class="modal-header">
+        <h2>Create title</h2>
+        <button class="close-modal-btn" data-modal-id="create-title-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="title1">Title 1</label>
+          <input type="text" id="title1">
+        </div>
+        <div class="form-group">
+          <label for="title2">Title 2</label>
+          <input type="text" id="title2">
+        </div>
+        <button class="btn add-btn">+ Add</button>
+      </div>
+      <div class="modal-footer">
+        <button class="btn red">Create (2 title)</button>
+      </div>
+    </div>
+  </div>
+
   <script>
     // Toggle click handler
     document.querySelectorAll('.toggle').forEach(el => {
@@ -156,10 +226,42 @@
     setupDropdown('.create-btn', '.create-popup');
 
     // Hide menus when clicking outside
-    window.addEventListener('click', () => {
-      document.querySelectorAll('.dropdown-menu').forEach(m => {
-        m.style.display = 'none';
+    window.addEventListener('click', (e) => {
+      if (!e.target.closest('.dropdown-container')) {
+        document.querySelectorAll('.dropdown-menu').forEach(m => {
+          m.style.display = 'none';
+        });
+      }
+    });
+
+    // ================= Modal handler =================
+    const contentModal = document.getElementById('create-content-modal');
+    const titleModal = document.getElementById('create-title-modal');
+
+    // Open Modals
+    document.querySelector('.create-popup .popup-item:nth-child(1)').addEventListener('click', (e) => {
+      e.preventDefault();
+      contentModal.style.display = 'flex';
+    });
+
+    document.querySelector('.create-popup .popup-item:nth-child(2)').addEventListener('click', (e) => {
+      e.preventDefault();
+      titleModal.style.display = 'flex';
+    });
+
+    // Close Modals with X button
+    document.querySelectorAll('.close-modal-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const modal = document.getElementById(btn.dataset.modalId);
+        modal.style.display = 'none';
       });
+    });
+
+    // Close Modals by clicking overlay
+    window.addEventListener('click', (e) => {
+      if (e.target.classList.contains('modal-overlay')) {
+        e.target.style.display = 'none';
+      }
     });
   </script>
 </body>

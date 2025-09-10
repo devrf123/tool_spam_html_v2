@@ -439,3 +439,60 @@
       font-size: 0.8rem;
       cursor: pointer;
     }
+
+    /* Edit Content Modal */
+    .edit-content-tabs {
+      background-color: #f8f8f8;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .radio-label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      color: #555;
+    }
+
+    .radio-label input[type="radio"] {
+      display: none; /* Hide original radio button */
+    }
+
+    .radio-custom {
+      width: 18px;
+      height: 18px;
+      border: 2px solid #ccc;
+      border-radius: 50%;
+      margin-right: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .radio-custom::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background-color: #C92326;
+      border-radius: 50%;
+      display: block;
+      transform: scale(0);
+      transition: transform 0.2s;
+    }
+
+    .radio-label input[type="radio"]:checked + .radio-custom {
+      border-color: #C92326;
+    }
+
+    .radio-label input[type="radio"]:checked + .radio-custom::after {
+      transform: scale(1);
+    }
+    
+    .radio-label input[type="radio"]:checked {
+        color: #111;
+    }

@@ -257,6 +257,41 @@
     </div>
   </div>
 
+  <!-- Edit Content Modal -->
+  <div id="edit-content-modal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Edit content</h2>
+        <button class="close-modal-btn" data-modal-id="edit-content-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="edit-content-tabs form-group">
+            <label class="radio-label">
+                <input type="radio" name="edit-content-type" value="html" checked>
+                <span class="radio-custom"></span>
+                Write HTML by hand
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="edit-content-type" value="editor">
+                <span class="radio-custom"></span>
+                Compose with Editor
+            </label>
+        </div>
+        <div class="form-group">
+          <label for="edit-content-name">Content name*</label>
+          <input type="text" id="edit-content-name">
+        </div>
+        <div class="form-group">
+          <label for="edit-email-content">Email Content*</label>
+          <textarea id="edit-email-content" rows="8"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn red">Update</button>
+      </div>
+    </div>
+  </div>
+
 <script>
   function openFileManagerModal() {
     document.getElementById("fileManagerModal").classList.add("active");
@@ -306,6 +341,7 @@
     const contentModal = document.getElementById('create-content-modal');
     const titleModal = document.getElementById('create-title-modal');
     const editTitleModal = document.getElementById('edit-title-modal');
+    const editContentModal = document.getElementById('edit-content-modal');
 
     // Open Modals
     document.querySelector('.create-popup .popup-item:nth-child(1)').addEventListener('click', (e) => {
@@ -332,6 +368,26 @@
         // Get the title from the clicked item and set it in the modal input
         const currentTitle = item.querySelector('span:first-child').innerText;
         document.getElementById('edit-title-input').value = currentTitle;
+      });
+    });
+
+    // Open Edit Content Modal when .content-item is clicked
+    document.querySelectorAll('.content-item').forEach((item) => {
+      item.addEventListener('click', (e) => {
+        // Do nothing if the click is on the toggle switch
+        if (e.target.classList.contains('toggle')) {
+            return;
+        }
+        
+        e.preventDefault();
+        editContentModal.style.display = 'flex';
+
+        // Get content and set it in the modal
+        const contentName = item.querySelector('.content-header span b').innerText;
+        const contentText = item.querySelector('.content-text').innerText;
+        
+        document.getElementById('edit-content-name').value = contentName;
+        document.getElementById('edit-email-content').value = contentText;
       });
     });
 

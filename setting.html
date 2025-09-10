@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mail Campaign Dashboard</title>
+    <link rel="stylesheet" href="assets/css/setting.css" />
+    <link rel="stylesheet" href="assets/css/button_stop.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="app">
+        <!-- ================= Sidebar ================= -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="logo"><img src="assets/images/logo.png" alt="Spamail"></div>
+            </div>
+
+            <div class="nav-group">
+                <div class="nav-item"><img src="assets/images/analysis-icon.png" alt=""><span>Analysis</span></div>
+                <div class="nav-item"><img src="assets/images/setting-icon.png" alt=""><span>Settings</span></div>
+                <div class="nav-item"><img src="assets/images/content-icon.png" alt=""><span>Content</span></div>
+                <div class="nav-item"><img src="assets/images/campaign-icon.png" alt=""><span>Campaign</span></div>
+            </div>
+
+            <div class="side-title">Campaign</div>
+            <div class="campaigns">
+                <div class="campaign active"><span>Campaign 1</span></div>
+                <div class="campaign"><span>Campaign 2</span></div>
+                <div class="campaign"><span>Campaign 3</span></div>
+                <div class="campaign"><span>Campaign 4</span></div>
+                <div class="campaign"><span>Campaign 5</span></div>
+                <div class="campaign"><span>Campaign 6</span></div>
+                <div class="campaign"><span>Campaign 7</span></div>
+                <div class="campaign"><span>Campaign 8</span></div>
+                <div class="campaign"><span>Campaign 9</span></div>
+                <div class="campaign"><span>Campaign 10</span></div>
+                <div class="campaign"><span>Campaign 11</span></div>
+                <div class="campaign"><span>Campaign 12</span></div>
+                <div class="campaign" style="color: #ccc;"><span>Campaign 13</span></div>
+            </div>
+            <div class="new-btn">
+                <button>+</button>
+            </div>
+        </aside>
+
+        <!-- ================= Main ================= -->
+        <main class="main bg-white py-10">
+            <div class="w-full max-w-[45rem] p-6 rounded-lg">
+                <h2 style="font-weight: 700; font-size: 38px;" class="mb-6">Settings</h2>
+
+                <!-- Toggle Item -->
+                <div style="border: 2px solid #E6E6E6; border-radius: 8px; padding: 10px;margin-bottom: 20px;margin-top:20px;"
+                    class="flex items-center justify-between py-3 border-b">
+                    <Span style="font-size: 18px;font-weight: 700;">Send All to Telegram</span>
+                    <div class="flex items-center gap-2">
+                        <button onclick="openModal('telegramModal')" class="relative w-12 h-6 bg-red-500 rounded-full">
+                            <span class="absolute left-6 top-0.5 w-5 h-5 bg-white rounded-full shadow"></span>
+                        </button>
+                        <a href="#"><img src="assets/images/muiten_st.png" width="18" height="18" alt="muiten_st"></a>
+                    </div>
+                </div>
+                <hr>
+                <div style="border: 2px solid #E6E6E6; border-radius: 8px; padding: 10px;margin-bottom: 20px;margin-top:20px;"
+                    class="flex items-center justify-between py-3 border-b">
+                    <span style="font-size: 18px;font-weight: 700;">Send SMS data to Google Sheet</span>
+                    <div class="flex items-center gap-2">
+                        <button onclick="openModal('smsModal')" class="relative w-12 h-6 bg-red-500 rounded-full">
+                            <span class="absolute left-6 top-0.5 w-5 h-5 bg-white rounded-full shadow"></span>
+                        </button>
+                        <a href="#"><img src="assets/images/muiten_st.png" width="18" height="18" alt="muiten_st"></a>
+                    </div>
+                </div>
+                <div style="border: 2px solid #E6E6E6; border-radius: 8px; padding: 10px;margin-bottom: 20px;margin-top:20px;"
+                    class="flex items-center justify-between py-3 border-b">
+                    <span style="font-size: 18px;font-weight: 700;">Send WhatsApp data to Google Sheet</span>
+                    <div class="flex items-center gap-2">
+                        <button class="relative w-12 h-6 bg-red-500 rounded-full">
+                            <span class="absolute left-6 top-0.5 w-5 h-5 bg-white rounded-full shadow"></span>
+                        </button>
+                        <a href="#"><img src="assets/images/muiten_st.png" width="18" height="18" alt="muiten_st"></a>
+                    </div>
+                </div>
+                <div style="border: 2px solid #E6E6E6; border-radius: 8px; padding: 10px;margin-bottom: 20px;margin-top:20px;"
+                    class="flex items-center justify-between py-3 border-b">
+                    <span style="font-size: 18px;font-weight: 700;">Send All data to Google Sheet</span>
+                    <div class="flex items-center gap-2">
+                        <button class="relative w-12 h-6 bg-red-500 rounded-full">
+                            <span class="absolute left-6 top-0.5 w-5 h-5 bg-white rounded-full shadow"></span>
+                        </button>
+                        <a href="#"><img src="assets/images/muiten_st.png" width="18" height="18" alt="muiten_st"></a>
+                    </div>
+                </div>
+                <hr>
+                <div style="border: 2px solid #E6E6E6; border-radius: 8px; padding: 10px;margin-bottom: 20px;margin-top:20px;"
+                    class="flex items-center justify-between py-3 border-b">
+                    <span style="font-size: 18px;font-weight: 700;">Send Mail analysis data to Google Sheet</span>
+                    <div class="flex items-center gap-2">
+                        <button class="relative w-12 h-6 bg-red-500 rounded-full">
+                            <span class="absolute left-6 top-0.5 w-5 h-5 bg-white rounded-full shadow"></span>
+                        </button>
+                        <a href="#"><img src="assets/images/muiten_st.png" width="18" height="18" alt="muiten_st"></a>
+                    </div>
+
+                </div>
+                <div style="border: 2px solid #E6E6E6; border-radius: 8px; padding: 10px;margin-bottom: 20px;margin-top:20px;"
+                    class="flex items-center justify-between py-3 border-b">
+                    <span style="font-size: 18px;font-weight: 700;">Send SMS analysis data to Google Sheet</span>
+                    <div class="flex items-center gap-2">
+                        <button class="relative w-12 h-6 bg-red-500 rounded-full">
+                            <span class="absolute left-6 top-0.5 w-5 h-5 bg-white rounded-full shadow"></span>
+                        </button>
+                        <a href="#"><img src="assets/images/muiten_st.png" width="18" height="18" alt="muiten_st"></a>
+                    </div>
+                </div>
+                <div style="border: 2px solid #E6E6E6; border-radius: 8px; padding: 10px;margin-bottom: 20px;margin-top:20px;"
+                    class="flex items-center justify-between py-3">
+                    <span style="font-size: 18px;font-weight: 700;">Send WhatsApp analysis data to Google Sheet</span>
+                    <div class="flex items-center gap-2">
+                        <button class="relative w-12 h-6 bg-red-500 rounded-full">
+                            <span class="absolute left-6 top-0.5 w-5 h-5 bg-white rounded-full shadow"></span>
+                        </button>
+                        <a href="#"><img src="assets/images/muiten_st.png" width="18" height="18" alt="muiten_st"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Telegram Modal -->
+            <div id="telegramModal"
+                class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                <div class="bg-white p-6 rounded-lg w-96">
+                    <h3 class="text-lg font-bold mb-4">Send All to Telegram</h3>
+                    <label class="block text-sm mb-2">Token</label>
+                    <input type="text" class="w-full border rounded p-2 mb-4">
+
+                    <label class="block text-sm mb-2">ID</label>
+                    <input type="text" class="w-full border rounded p-2 mb-4">
+
+                    <button onclick="closeModal('telegramModal')"
+                        class="w-full bg-red-500 text-white py-2 rounded">Done</button>
+                </div>
+            </div>
+
+            <!-- SMS Modal -->
+            <div id="smsModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                <div class="bg-white p-6 rounded-lg w-96">
+                    <h3 class="text-lg font-bold mb-4">Send SMS data to Google Sheet</h3>
+                    <label class="block text-sm mb-2">Key</label>
+                    <input type="text" class="w-full border rounded p-2 mb-4">
+
+                    <button onclick="closeModal('smsModal')"
+                        class="w-full bg-red-500 text-white py-2 rounded">Done</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- ================= Mobile UI ================= -->
+        <div class="mobile-header">
+            <button class="btn-analysis">Analysis</button>
+            <div class="campaign-dropdown-mobile">
+                <button class="campaign-dropbtn">
+                    <span>Campaign 1</span>
+                    <img src="assets/images/arrow-down.png" alt="v" width="12">
+                </button>
+                <div class="campaign-dropdown-content">
+                    <a href="#" class="active"><span>Campaign 2</span> <img src="assets/images/check-icon.png"
+                            alt="check" width="14"></a>
+                    <a href="#"><span>Campaign 3</span></a>
+                    <a href="#"><span>Campaign 4</span></a>
+                    <a href="#"><span>Campaign 5</span></a>
+                    <a href="#"><span>Campaign 6</span></a>
+                    <a href="#"><span>Campaign 7</span></a>
+                    <a href="#"><span>Campaign 8</span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-bottom-bar">
+            <div class="start-button-container-mobile">
+                <button class="btn">▶ Start</button>
+            </div>
+
+            <nav class="bottom-nav">
+                <a href="#" class="bottom-nav-item active">
+                    <img src="assets/images/mail-icon-red.png" alt="Mail">
+                </a>
+                <a href="#" class="bottom-nav-item">
+                    <img src="assets/images/mess-icon-gray.png" alt="SMS">
+                </a>
+                <a href="#" class="bottom-nav-item">
+                    <img src="assets/images/whatapp-icon-gray.png" alt="WhatsApp">
+                </a>
+                <a href="#" class="bottom-nav-item">
+                    <img src="assets/images/setting-icon-gray.png" alt="Settings">
+                </a>
+            </nav>
+        </div>
+    </div>
+
+</body>
+<script>
+    function openModal(id) {
+        document.getElementById(id).classList.remove("hidden");
+    }
+    function closeModal(id) {
+        document.getElementById(id).classList.add("hidden");
+    }
+</script>
+
+</html>

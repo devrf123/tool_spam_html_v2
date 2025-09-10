@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Content Manage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/content_manage.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>Content Manage</h1>
+      <div class="actions">
+        <button class="btn"><img src="assets/images/copy.png" alt=""> File Manage</button>
+        <button class="btn"><img src="assets/images/placehover-icon.png" alt="">Placeholder <img src="assets/images/xo-icon.png" alt=""></button>
+        <button class="btn red"><img src="assets/images/copy-white.png" alt=""> Create <img src="assets/images/xo-white.png" alt=""></button>
+        <button style="border: none;" class="btn"><img width="32" height="32" src="assets/images/x-icon.png" alt=""></button>
+      </div>
+    </div>
+
+    <!-- Body -->
+    <div class="body">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Repeatable item -->
+        <div class="item">
+          <span>Title 1</span>
+          <div style="display:flex;align-items:center;">
+            <span class="edit">Edit</span>
+            <div class="toggle active"></div>
+          </div>
+        </div>
+        <div class="item">
+          <span>Title 2</span>
+          <div style="display:flex;align-items:center;">
+            <span class="edit">Edit</span>
+            <div class="toggle"></div>
+          </div>
+        </div>
+        <div class="item">
+          <span>Title 3</span>
+          <div style="display:flex;align-items:center;">
+            <span class="edit">Edit</span>
+            <div class="toggle"></div>
+          </div>
+        </div>
+        <!-- ... thêm Title 4 -> Title 12 tương tự -->
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <div class="content-item">
+          <div class="content-header">
+            <span><b>Content 1 HTML</b></span>
+            <div style="display:flex;align-items:center;">
+              <span class="edit">Edit</span>
+              <div class="toggle active"></div>
+            </div>
+          </div>
+          <p class="content-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...
+          </p>
+        </div>
+
+        <div class="content-item">
+          <div class="content-header">
+            <span><b>Content 1 HTML</b></span>
+            <div style="display:flex;align-items:center;">
+              <span class="edit">Edit</span>
+              <div class="toggle"></div>
+            </div>
+          </div>
+          <p class="content-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...
+          </p>
+        </div>
+        <!-- ... lặp thêm các content khác -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Toggle click handler
+    document.querySelectorAll('.toggle').forEach(el => {
+      el.addEventListener('click', () => {
+        el.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>

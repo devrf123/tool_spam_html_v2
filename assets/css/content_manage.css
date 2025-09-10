@@ -344,3 +344,98 @@
       margin-top: 0.5rem;
       line-height: 1.4;
     }
+
+     /* Overlay */
+    .file-manager-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+    .file-manager-modal-overlay.active {
+      display: flex;
+    }
+
+    /* Modal box */
+    .file-manager-modal-box {
+      background: #fff;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 900px;
+      max-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header */
+    .file-manager-modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+      background: #fff;
+    }
+    .file-manager-modal-header h2 {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .file-manager-modal-header small {
+      display: block;
+      font-size: 0.8rem;
+      color: #666;
+      margin-top: 0.25rem;
+    }
+    .file-manager-modal-actions {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .file-manager-modal-btn {
+      padding: 0.4rem 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background: #f9f9f9;
+      cursor: pointer;
+      font-size: 0.8rem;
+    }
+    .file-manager-modal-btn.red {
+      background: #e11;
+      color: #fff;
+      border: none;
+    }
+
+    /* Content */
+    .file-manager-modal-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1rem;
+    }
+    .file-manager-modal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 2rem;
+    }
+    .file-manager-modal-file {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.6rem 0.5rem;
+      border-bottom: 1px solid #f3f3f3;
+      font-size: 0.85rem;
+    }
+    .file-manager-modal-file span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .file-manager-modal-file .delete {
+      color: #e11;
+      font-size: 0.8rem;
+      cursor: pointer;
+    }

@@ -13,7 +13,7 @@
     <div class="header">
       <h1>Content Manage</h1>
       <div class="actions">
-        <button class="btn"><img src="assets/images/copy.png" alt=""> File Manage</button>
+        <button onclick="openFileManagerModal()" class="btn"><img src="assets/images/copy.png" alt=""> File Manage</button>
         
         <div class="dropdown-container">
           <button class="btn placeholder-btn"><img src="assets/images/placehover-icon.png" alt="">Placeholder <img src="assets/images/xo-icon.png" alt=""></button>
@@ -197,6 +197,55 @@
       </div>
     </div>
   </div>
+
+  <!-- Modal -->
+<div class="file-manager-modal-overlay" id="fileManagerModal">
+  <div class="file-manager-modal-box">
+    <!-- Header -->
+    <div class="file-manager-modal-header">
+      <div>
+        <h2>File Manage</h2>
+        <small>Each campaign up to 10 files. Campaign 1: 1 file selected</small>
+      </div>
+      <div class="file-manager-modal-actions">
+        <button class="file-manager-modal-btn red">Upload file</button>
+        <button class="file-manager-modal-btn" onclick="closeFileManagerModal()">✕</button>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="file-manager-modal-content">
+      <div class="file-manager-modal-grid">
+        <div class="file-manager-modal-file">
+          <span>📄 file_1.png <small>20KB</small></span>
+          <span class="delete">Delete</span>
+        </div>
+        <div class="file-manager-modal-file">
+          <span>📄 file_2.png <small>25KB</small></span>
+          <span class="delete">Delete</span>
+        </div>
+        <div class="file-manager-modal-file">
+          <span>📄 file_3.png <small>30KB</small></span>
+          <span class="delete">Delete</span>
+        </div>
+        <div class="file-manager-modal-file">
+          <span>📄 file_4.png <small>50KB</small></span>
+          <span class="delete">Delete</span>
+        </div>
+        <!-- ... thêm file khác -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openFileManagerModal() {
+    document.getElementById("fileManagerModal").classList.add("active");
+  }
+  function closeFileManagerModal() {
+    document.getElementById("fileManagerModal").classList.remove("active");
+  }
+</script>
 
   <script>
     // Toggle click handler

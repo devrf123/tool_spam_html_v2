@@ -14,8 +14,52 @@
       <h1>Content Manage</h1>
       <div class="actions">
         <button class="btn"><img src="assets/images/copy.png" alt=""> File Manage</button>
-        <button class="btn"><img src="assets/images/placehover-icon.png" alt="">Placeholder <img src="assets/images/xo-icon.png" alt=""></button>
-        <button class="btn red"><img src="assets/images/copy-white.png" alt=""> Create <img src="assets/images/xo-white.png" alt=""></button>
+        
+        <div class="dropdown-container">
+          <button class="btn placeholder-btn"><img src="assets/images/placehover-icon.png" alt="">Placeholder <img src="assets/images/xo-icon.png" alt=""></button>
+          <div class="dropdown-menu placeholder-popup">
+            <div class="popup-header">Placeholder</div>
+            <div class="placeholder-item">
+              <span>1</span>
+              <span class="tag">[:uid]</span>
+              <span>&rarr;</span>
+              <span>UID</span>
+            </div>
+            <div class="placeholder-item">
+              <span>2</span>
+              <span class="tag">[:fullname]</span>
+              <span>&rarr;</span>
+              <span>Name</span>
+            </div>
+            <div class="placeholder-item">
+              <span>3</span>
+              <span class="tag">[:email]</span>
+              <span>&rarr;</span>
+              <span>Email</span>
+            </div>
+            <div class="placeholder-item">
+              <span>4</span>
+              <span class="tag">[:phone]</span>
+              <span>&rarr;</span>
+              <span>Phone</span>
+            </div>
+            <div class="placeholder-item">
+              <span>5</span>
+              <span class="tag">[:website]</span>
+              <span>&rarr;</span>
+              <span>Web</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dropdown-container">
+          <button class="btn red create-btn"><img src="assets/images/copy-white.png" alt=""> Create <img src="assets/images/xo-white.png" alt=""></button>
+          <div class="dropdown-menu create-popup">
+            <a href="#" class="popup-item">Content</a>
+            <a href="#" class="popup-item">Title</a>
+          </div>
+        </div>
+
         <button style="border: none;" class="btn"><img width="32" height="32" src="assets/images/x-icon.png" alt=""></button>
       </div>
     </div>
@@ -89,6 +133,32 @@
     document.querySelectorAll('.toggle').forEach(el => {
       el.addEventListener('click', () => {
         el.classList.toggle('active');
+      });
+    });
+
+    // Dropdown handler
+    function setupDropdown(btnClass, menuClass) {
+      const btn = document.querySelector(btnClass);
+      const menu = document.querySelector(menuClass);
+
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        // Hide other menus
+        document.querySelectorAll('.dropdown-menu').forEach(m => {
+          if (m !== menu) m.style.display = 'none';
+        });
+        // Toggle current menu
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+      });
+    }
+
+    setupDropdown('.placeholder-btn', '.placeholder-popup');
+    setupDropdown('.create-btn', '.create-popup');
+
+    // Hide menus when clicking outside
+    window.addEventListener('click', () => {
+      document.querySelectorAll('.dropdown-menu').forEach(m => {
+        m.style.display = 'none';
       });
     });
   </script>
